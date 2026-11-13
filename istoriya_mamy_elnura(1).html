@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f7eee8">
+<title>История нашей семьи</title>
+<style>
+:root{--ink:#263b35;--muted:#687a70;--rose:#789b88;--cream:#f4f5ef;--gold:#c3a66b;--line:#dce4d9}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Georgia,'Times New Roman',serif}
+.hero{min-height:92vh;display:grid;place-items:center;text-align:center;padding:70px 22px;position:relative;overflow:hidden;background:radial-gradient(circle at 15% 20%,#e2ebdf 0 12%,transparent 34%),radial-gradient(circle at 85% 75%,#e8e0cf 0 10%,transparent 32%),linear-gradient(135deg,#f5f4ec,#e8eee5 55%,#e5e8dc)}
+.hero:before,.hero:after{content:"";position:absolute;border:1px solid #789b8844;border-radius:50%;width:440px;height:440px}
+.hero:before{top:-260px;left:-180px}.hero:after{bottom:-300px;right:-160px;width:560px;height:560px}
+.eyebrow{font:600 12px/1.4 Arial,sans-serif;letter-spacing:4px;text-transform:uppercase;color:#587d6b}
+h1{font-size:clamp(42px,8vw,82px);font-weight:400;line-height:1.03;margin:20px 0 16px}
+.hero p{font-size:clamp(17px,2.6vw,22px);color:var(--muted);max-width:610px;line-height:1.7;margin:0 auto}
+.date{margin-top:28px;color:#718c79;letter-spacing:2px;font:12px Arial,sans-serif}
+.scroll{margin-top:54px;color:#718c79;font:12px Arial,sans-serif;letter-spacing:2px}
+nav{position:sticky;top:0;z-index:5;background:#f4f5efed;backdrop-filter:blur(12px);border-bottom:1px solid var(--line);display:flex;justify-content:center;gap:clamp(12px,3vw,34px);padding:15px 10px;flex-wrap:wrap}
+nav a{color:#4d685a;text-decoration:none;font:12px Arial,sans-serif;letter-spacing:1px}nav a:hover{color:#527c66}
+section{padding:84px 22px;max-width:1000px;margin:auto}.section-label{text-align:center;color:#527c66;font:11px Arial,sans-serif;letter-spacing:3px;text-transform:uppercase}
+h2{text-align:center;font-size:clamp(30px,5vw,46px);font-weight:400;margin:13px 0 18px}
+.intro{max-width:720px;margin:0 auto;text-align:center;font-size:18px;line-height:1.9;color:#6e5c56}
+.timeline{position:relative;max-width:760px;margin:48px auto 0;padding:0 0 0 30px}
+.timeline:before{content:"";position:absolute;left:8px;top:8px;bottom:8px;width:1px;background:var(--line)}
+.event{position:relative;padding:0 0 38px 28px}
+.event:before{content:"";position:absolute;left:-27px;top:5px;width:11px;height:11px;border-radius:50%;background:#789b88;border:4px solid var(--cream);box-shadow:0 0 0 1px #789b88}
+.year{font:11px Arial,sans-serif;letter-spacing:2px;color:#6f907b;text-transform:uppercase}
+.event h3{font-size:23px;font-weight:400;margin:8px 0}
+.event p{font:15px/1.85 Arial,sans-serif;color:#766660;margin:0}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:38px}
+.card{background:#fbfcf8;border:1px solid var(--line);border-radius:8px;padding:28px;box-shadow:0 12px 35px #304b390d}
+.card .symbol{font-size:25px;color:#789b88}.card h3{font-size:21px;font-weight:400;margin:12px 0 8px}.card p{font:14px/1.8 Arial,sans-serif;color:#766660;margin:0}
+.quote{margin:20px auto 0;max-width:740px;text-align:center;padding:36px 24px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-size:clamp(22px,4vw,30px);line-height:1.55;color:#587d6b;font-style:italic}
+.memory{background:#e8eee5;max-width:none;padding:78px 22px}.memory-inner{max-width:850px;margin:auto;text-align:center}.memory p{font-size:17px;line-height:1.9;color:#6e5c56}
+footer{text-align:center;padding:55px 20px 65px;background:#263b35;color:#f1f4ec}
+footer .heart{font-size:25px;color:#c3a66b}footer p{font:12px/1.8 Arial,sans-serif;color:#d4dfd3;letter-spacing:1px}
+.names{display:flex;justify-content:center;align-items:center;gap:14px;flex-wrap:wrap;margin:6px auto 0;font-size:clamp(19px,3.4vw,26px);color:#587d6b}.names .amp{color:var(--gold);font-size:1.2em}
+.parent-title{text-align:center;margin:64px 0 0}.parent-title h3{font-size:clamp(24px,4vw,32px);font-weight:400;margin:10px 0 0}
+.remember{background:#fbfcf8;border:1px solid var(--line);border-radius:8px;padding:34px 28px;max-width:640px;margin:34px auto 0;text-align:center;box-shadow:0 12px 35px #304b390d}.remember .symbol{font-size:25px;color:#c3a66b}.remember h3{font-size:24px;font-weight:400;margin:12px 0 10px}.remember p{font:15px/1.85 Arial,sans-serif;color:#766660;margin:0}
+@media(max-width:560px){section{padding:65px 20px}.timeline{padding-left:24px}.event{padding-left:23px}.event:before{left:-24px}nav{gap:13px}nav a{font-size:10px}}
+</style>
+</head>
+<body>
+<header class="hero" id="top">
+  <div>
+    <div class="eyebrow">Наша семейная летопись</div>
+    <h1>История<br>нашей семьи</h1>
+    <p>Люди, встречи, воспоминания и события, из которых складывается одна большая семейная история.</p>
+    <div class="date">ПОКОЛЕНИЯ · ЛЮБОВЬ · ПАМЯТЬ</div>
+    <div class="scroll">ЛИСТАЙТЕ ВНИЗ ↓</div>
+  </div>
+</header>
+<nav>
+  <a href="#story">НАЧАЛО</a><a href="#parents">РОДИТЕЛИ</a><a href="#family">СЕМЬЯ</a><a href="#love">ЛЮБОВЬ</a><a href="#today">СЕГОДНЯ</a>
+</nav>
+<section id="story">
+  <div class="section-label">Глава первая</div>
+  <h2>С чего всё начиналось</h2>
+  <p class="intro">8 февраля 1992 года родилась Эгембердиева Эльнура. Она росла рядом с мамой и папой, в окружении семьи и родных людей. Со временем её детство стало ещё веселее — в семье появился младший брат Элдар.</p>
+  <div class="timeline">
+    <article class="event"><div class="year">Детство</div><h3>Маленькая Эльнура</h3><p>Эльнура росла вместе с родителями. В её жизни было много семейных дней, тёплых воспоминаний и важных моментов.</p></article>
+    <article class="event"><div class="year">Семейные годы</div><h3>Брат Элдар</h3><p>В семье появился братик — Эгембердиев Элдар. Они росли вместе, делили радостные истории и разные приключения. Даже после всяких детских «попадосов» не держали друг на друга обиды.</p></article>
+    <article class="event"><div class="year">Школьные годы</div><h3>Школа имени Кирова</h3><p>Эльнура и Элдар учились в школе имени Кирова до 11 класса. Эльнура окончила школу с отличием, а Элдар — с хорошими и отличными оценками.</p></article>
+    <article class="event"><div class="year">Новая глава</div><h3>Учёба и мечты</h3><p>После школы их пути продолжились в разных направлениях: Эльнура поступила на медицинский факультет, а Элдар выбрал обучение в учреждении полиции.</p></article>
+    <article class="event"><div class="year">Позже</div><h3>Младшая сестрёнка</h3><p>В семье росла и младшая сестра — Эгембердиева Ханайым. Рядом с мамой и родными она стала ещё одной важной частью семейной истории.</p></article>
+  </div>
+</section>
+<section id="parents">
+  <div class="section-label">Наши корни</div>
+  <h2>Родители</h2>
+  <div class="names"><span>Эгембердиева Шайыр</span><span class="amp">&amp;</span><span>Рахат Эгембердиев</span></div>
+
+  <div class="parent-title">
+    <div class="section-label">Мама</div>
+    <h3>Эгембердиева Шайыр</h3>
+  </div>
+  <p class="intro" style="margin-top:22px">Шайыр родилась в Кыргызстане 14 ноября 1964 года. Она училась с хорошими оценками, получила знания и прошла долгий и непростой путь.</p>
+  <div class="timeline">
+    <article class="event"><div class="year">Учёба</div><h3>Медицинский факультет</h3><p>Шайыр поступила на медицинский факультет и успешно проучилась. После этого она уехала в Россию работать.</p></article>
+    <article class="event"><div class="year">Россия</div><h3>Первые шаги</h3><p>В России она работала продавцом фруктов и овощей. Именно с этого началось её восхождение — она провела этот период жизни в счастье.</p></article>
+    <article class="event"><div class="year">Дорога</div><h3>Разные страны</h3><p>Со временем она стала ездить в разные страны, где продолжала работать и набираться опыта.</p></article>
+    <article class="event"><div class="year">Трудный путь</div><h3>«С грузовика на грузовик»</h3><p>По её рассказам, ей приходилось прыгать с грузовиков на грузовики. Она прошла очень сложный путь и многому научилась.</p></article>
+    <article class="event"><div class="year">Результат</div><h3>Свой дом и своё дело</h3><p>Шайыр купила три дома, после чего — дом, в котором семья живёт сейчас, четвёртый. Затем она купила ещё один и открыла 4 магазина со стабильным доходом.</p></article>
+    <article class="event"><div class="year">Сегодня</div><h3>Счастливая жизнь</h3><p>Сейчас она живёт счастливой жизнью. Она поборола очень большие трудности и добилась всего своим трудом.</p></article>
+  </div>
+  <div class="quote">Она принесла в наш дом уют и тепло, которое не принесёт никто другой</div>
+
+  <div class="parent-title" style="margin-top:56px">
+    <div class="section-label">Папа</div>
+    <h3>Рахат Эгембердиев</h3>
+  </div>
+  <div class="remember">
+    <div class="symbol">♡</div>
+    <h3>Светлая память</h3>
+    <p>Рахат Эгембердиев погиб очень рано. Семья с любовью и уважением хранит память о нём.</p>
+  </div>
+</section>
+<section id="family">
+  <div class="section-label">Самое дорогое</div>
+  <h2>Семья — её опора</h2>
+  <p class="intro">В каждой семье есть люди, с которыми связаны самые первые воспоминания, поддержка и чувство дома.</p>
+  <div class="cards">
+    <div class="card"><div class="symbol">✧</div><h3>Мама и папа</h3><p>Люди, рядом с которыми началась история Эльнуры. Их забота и семейные воспоминания — важная часть её жизни.</p></div>
+    <div class="card"><div class="symbol">♡</div><h3>Элдар</h3><p>Брат, с которым прошло детство: общие приключения, смешные истории и крепкая родственная связь.</p></div>
+    <div class="card"><div class="symbol">✿</div><h3>Ханайым</h3><p>Младшая сестра, которая тоже занимает особое место в большой семейной истории.</p></div>
+  </div>
+</section>
+<section id="love">
+  <div class="section-label">Глава о любви</div>
+  <h2>Встреча, изменившая жизнь</h2>
+  <p class="intro">Примерно в 20–21 год в жизни Эльнуры появилась любовь — Белеков Нооруз. В 22 года они поженились, а в 23 года у них родился сын — Самидинов Умар.</p>
+  <div class="quote">«Самые дорогие люди навсегда остаются частью нашей истории»</div>
+  <p class="intro" style="margin-top:30px">Позже Нооруз трагически погиб в автомобильной аварии. Его жизнь оборвалась слишком рано, но память о нём и место в истории семьи остаются. С любовью и уважением семья хранит воспоминания о нём.</p>
+</section>
+<div class="memory">
+  <div class="memory-inner">
+    <div class="section-label">Память и продолжение</div>
+    <h2>История продолжается</h2>
+    <p>После пережитых событий Эльнура продолжила идти вперёд и заботиться о своей семье. В жизни бывают непростые главы, но любовь близких, память и надежда помогают сохранять силы.</p>
+  </div>
+</div>
+<section id="today">
+  <div class="section-label">Новая глава</div>
+  <h2>Умар — продолжение семейной истории</h2>
+  <p class="intro">Самидинов Умар учится в той же школе, где когда-то учились его родные: школе имени Кирова, которая теперь носит имя Абдуразакова. Он учится с отличием и занимается футболом.</p>
+  <div class="cards">
+    <div class="card"><div class="symbol">✧</div><h3>Учёба</h3><p>Умар старается хорошо учиться и продолжает семейную традицию стремления к знаниям.</p></div>
+    <div class="card"><div class="symbol">⚽</div><h3>Футбол</h3><p>Спорт учит его работать в команде, быть настойчивым и не сдаваться перед трудностями.</p></div>
+    <div class="card"><div class="symbol">♡</div><h3>Будущее</h3><p>Впереди у него много дорог и возможностей. И это — следующая глава истории семьи.</p></div>
+  </div>
+</section>
+<footer>
+  <div class="heart">♡</div>
+  <h2 style="color:#f8e9e3;margin:12px 0">С любовью о семье</h2>
+  <p>СЕМЕЙНАЯ ЛЕТОПИСЬ</p>
+  <p>Каждая семья — это целая история. И эта история продолжается.</p>
+</footer>
+</body>
+</html>
